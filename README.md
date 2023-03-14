@@ -32,7 +32,7 @@ UTM ubuntu 20.04 M1 install
 
 ---
 
-![Untitled](./Untitled.png)
+![Untitled](핵심만%20콕!%20쿠버네티스%20a3cc7d95c454417ba2fc5785fd14e515/Untitled.png)
 
 ## 도커설치
 
