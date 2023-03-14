@@ -32,7 +32,7 @@ UTM ubuntu 20.04 M1 install
 
 ---
 
-![Untitled](%E1%84%92%E1%85%A2%E1%86%A8%E1%84%89%E1%85%B5%E1%86%B7%E1%84%86%E1%85%A1%E1%86%AB%20%E1%84%8F%E1%85%A9%E1%86%A8!%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20a3cc7d95c454417ba2fc5785fd14e515/Untitled.png)
+![Untitled](./Untitled.png)
 
 ## 도커설치
 
