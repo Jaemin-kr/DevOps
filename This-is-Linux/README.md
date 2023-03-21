@@ -1,7 +1,5 @@
 # Ch.04 서버구축 필수 명령어
 
----
-
 - poweroff, shutdow -P now, halt -p, init 0 (시스템 종료)
     
     ```bash
@@ -15,8 +13,7 @@
 - logout, exit (로그아웃)
 
 ### 가상콘솔
-
----
+***
 
 CentOS는 6개의 가상콘솔을 제공하며 가상의 모니터라고 생각하면 된다.
 
