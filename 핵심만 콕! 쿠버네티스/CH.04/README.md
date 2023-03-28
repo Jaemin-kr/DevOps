@@ -1,10 +1,8 @@
-# Ch.03 쿠버네티스 기초
+# Ch.04 쿠버네티스 기초
 
 쿠버네티스 클러스터룰 컨트롤 하기 위해서는 kubectl이라는 명령툴을 사용한다. 쿠버넽티스 API 서버는 REST API로 통신을 한다. 사용자가 직접 HTTP프로토콜로 API서버와 통신할수도 있지만 쿠버네티스에서는 쉽게 마스터와 통신할 수 있게 해주는 클라이언트 툴인 kubectl을 제공한다.
 
-사용자 이름: jaemin
-
-## 4.1 기본명령
+## 4.1 기본 명령
 
 컨테이너를 조작하는 docker와 마찬가지로 kubectl명령을 통해 쿠버네티스 클러스터를 조작해본다.
 
@@ -212,3 +210,129 @@ mynginx.yaml에  라벨을 추가하고 다시 실행하면 새로 컨테이너�
 - kube-system: 쿠버네티스의 핵심 컴포넌트들이 있는 네임스페이스로 해당 네임스페이스에 네트워크 설정, DNS 서버 등 중요한 역할을 담당하는 컨테이너가 존재한다
 - kube-public: 외부로 공개 가능한 리소스를 담고있는 네임스페이스
 - kube-node-lease: 노드가 살아있는지 마스터에 알리는 용도로 존재하는 네임스페이스
+
+명령을 실행 할 때, —namespace옵션(-n)을 이용하여 특정 네임스페이스에 리소스를 생성할 수 있다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5993afdf-f7b3-4684-b2e9-1ac64bf5b428/Untitled.png)
+
+네임스페이스 옵션 생략시 default 네임스페이스가 설정된다.
+
+### 4.2.3 자동완성 기능
+
+kubectl명령을 자동완성하게 해주는 쉘스크립트 제공
+
+```bash
+echo 'source <(kubectl completion bash)' >> ~/.bashrc
+```
+
+### 4.2.4 즉석 리소스 생성
+
+YAML 정의서를 사용하지 않고 cat & here document명령어를 이용하여 빠르게 리소스 생성가능
+
+```bash
+cat << EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+    name: cat-nginx
+spec:
+    containers:
+    - image: nginx
+      name: cat-nginx
+EOF
+```
+
+### 4.2.5 리소스 특정 정보 추출
+
+—jsonpath 를 이용하면 리소스의 특정 정보만을 골라서 추출할 수 있음
+
+찾고자하는 값의 json경로를 기록하면 경로에 대한 값이 추출됨
+
+<aside>
+💡 kubectl get node master -o jsonpath="{.status.addresses[0].address}”
+
+</aside>
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d539d994-06f5-47c8-8043-22bc62ee3606/Untitled.png)
+
+마스터 노드 IP출력
+
+### 4.2.6 모든 리소스 조회
+
+<aside>
+💡 kubectl api-resources
+
+</aside>
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ec219e8-9bda-4945-b533-93277677e44a/Untitled.png)
+
+쿠버네티스 리소스는 네임스페이스 레벨 리소스와 클러스터 레벨 리소스로 구분됨. 
+
+- 네임스페이스 레벨 리소스는: 해당 리소스가 반드시 특정 네임스페이스에 속해야하는 리소스(ex. Pod)
+- 클러스터레벨 리소스: 네임스페이스와 상관 없이 클러스터 레벨에 존재하는 리소스(ex. Node)
+
+네임스페이스 레벨의 API리소스만 탐색하기 위한 명령어는 다음과 같음
+
+<aside>
+💡 kubectl api-resources --namespaced=true
+
+</aside>
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17c08c25-a9cf-49e8-bbb4-3075dd8f0b36/Untitled.png)
+
+### 4.2.7 리소스 정의 설명
+
+<aside>
+💡 kubectl explain pods
+
+</aside>
+
+리소스의 정의와 설명을 살펴보는 커맨드
+
+### 4.2.8 클러스터 상태 확인
+
+<aside>
+💡 #API서버 작동여부
+kubectl cluster-info
+
+# 전체 노드상태 확인
+kubectl get node
+
+# 쿠버네티스 핵심 컴포넌트 Pod상태 확인
+kubectl get pod -n kube-system
+
+</aside>
+
+전반적인 cluster health check
+
+### 4.2.9 클라이언트 설정 파일
+
+<aside>
+💡 #view명령을 통해 설정 파일 직접 출력
+kubectl config view
+
+#KUBECONFIG설정파일 직접 출력
+cat $HOME/.kube/config
+
+</aside>
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a80b2e2d-278d-4256-a76e-1478fac71c3c/Untitled.png)
+
+KUBECONFIG파일 
+
+- cluster: kubectl 툴이 바라보는 클러스터 정보를 입력, 예제에서는 쿠버네티스 API서버와 kubectl 툴이 동일한 서버에 존재하므로 localhost(127.0.0.1)을 바라보지만 원격에 위치한 클러스터인 경우 원격 주소지를 입력함
+- users: k8s 클러스터에 접속하는 사용자정의
+- contxext: 클러스터와 user를 연결해주는 것, kubectl이 여러개의 클러스터나 사용자를 관리할 경우 유용하게 사용가능
+
+### 4.2.10 kubectl 명령 치트시트
+
+kubectl 명령어 확인가능
+
+[kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+### Clean up
+
+<aside>
+💡 kubectl delete pod —all
+
+</aside>
