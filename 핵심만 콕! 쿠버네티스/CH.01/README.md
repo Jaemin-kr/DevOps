@@ -70,7 +70,7 @@ AWS EC2 Free-Tier Ubuntu 20.04로진행
 
 sudo apt update && sudo apt install -y [docker.io](http://docker.io/) net-tools
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%201.png)
 
 sudo usermod -aG docker $USER
 
@@ -82,19 +82,19 @@ cowsay hello world!
 
 docker run docker/whalesay cowsay 'hello world!’
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%201.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%202.png)
 
 docker run -d nginx #nginx 이미지 run
 
 docker ps 프로세스 아이디 확인
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%202.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%203.png)
 
 로그확인
 
 docker logs -f 73588180c437
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%203.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%204.png)
 
 nginx 컨테이너에 명령 전달
 
@@ -102,7 +102,7 @@ docker exec 73588180c437 sh -c 'apt update && apt install -y wget’
 
 docker exec 73588180c437 wget localhost
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%204.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%205.png)
 
 컨테이너/호스트간 파일복사
 
@@ -112,23 +112,23 @@ docker cp /etc/passwd 73588180c437:/usr/share/nginx/html/.
 
 확인: docker exec 73588180c437 curl localhost/passwd
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%205.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%206.png)
 
                     컨테이너                                                                 호스트(현재위치)
 
 docker cp 73588180c437:/usr/share/nginx/html/index.html .
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%206.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%207.png)
 
 컨테이너 중단/재개/삭제
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%207.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%208.png)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%208.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%209.png)
 
 삭제 stop and rm
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%209.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2010.png)
 
 interactive container: 이미지 실행시 -it옵션을 통해 직접 컨테이너 안으로 접속하여 작업할 수 있음
 
@@ -148,17 +148,17 @@ bash 접속
 
 docker exec -it [Container ID] bash
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2010.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2011.png)
 
 UTM ubuntu 20.04로 진행
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2011.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2012.png)
 
 docker hub에 이미지 push
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2012.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2013.png)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2013.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2014.png)
 
 ### 1.4.1 Dockerfile 기초
 
@@ -202,7 +202,7 @@ CMD ["python", "hello.py", "guest"]
 - ENV: 이미지의 환경변수 지정
 - CMD: 이미지 실행시 default 실행 명령을 지정
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2014.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2015.png)
 
 ## 1.5 도커 실행 고급
 
@@ -216,11 +216,11 @@ docker run -p 5000:80 -d nginx
 
 외부의 트래픽을 컨테이너 내부로 전달하기위해 로컬 호스트 서버와 컨테이너의 포트를 매핑시켜 트래픽 포워딩(포트 포워딩) 호스트의 5000번 포트를 컨테이너의 80번 포트로 매핑
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2015.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2016.png)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2016.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2017.png)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2017.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2018.png)
 
 ### 1.5.2 Volume
 
@@ -263,7 +263,7 @@ docker run --entrypoint=cat lets-echo /etc/passwd
 
 기본적으로 컨테이너의 유저는 root지만 보안상의 이유로 일반유저를 만들어 사용할 수 있음
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2018.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2019.png)
 
 ```bash
 #Dockerfile
@@ -285,13 +285,13 @@ ubuntu@~:/$
 
 ubuntu유저로 컨테이너 실행 후 apt update → permission denied)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2019.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2020.png)
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2020.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2021.png)
 
 root user로 컨테이너 실행 후 apt update
 
-![Untitled](Ch01%20%E1%84%83%E1%85%A9%E1%84%8F%E1%85%A5%20%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%20ee3d99e02fa44966853440e938907a95/Untitled%2021.png)
+![Untitled](../../핵심만%20콕!%20쿠버네티스/images/Ch01_image/Untitled%2022.png)
 
 컨테이너는 가상환경을 통해 도커가 설치된 어디서든 정상적으로 프로세스가 동작하게 해준다. 쿠버네티스는 이러한 도커의 특성을 이용하여 여러 서버에서 여러개의 컨테이너를 관리하는데 집중한다.
 
