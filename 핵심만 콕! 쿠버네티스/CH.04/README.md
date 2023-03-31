@@ -24,7 +24,7 @@ image: nginx
 
 </aside>
 
-![Untitled](../images/CH04_image/Untitled.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled.png" width="80%" height="100%"/>
 
 > pod?
 Pod는 쿠버네티스의 가장 작은 실행단위
