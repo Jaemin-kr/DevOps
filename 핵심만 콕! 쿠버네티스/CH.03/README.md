@@ -47,7 +47,7 @@ LISTEN중인 포트확인: netstat -nap | grep LISTEN
     iptables -l INPUT 1 -p udp —dport 12345 -j ACCEPT
     
 
-![Untitled](Ch%2003%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20054d9dc39f3b4b7aa79f4d457be088db/Untitled.png)
+<img src = "https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch03_image/Untitled.png" width="80%" height="80%">
 
 포트설정 저장
 
@@ -57,11 +57,11 @@ sudo apt update
 
 sudo apt install -y [docker.io](http://docker.io) nfs-common dnsutils curl
 
-![Untitled](Ch%2003%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20054d9dc39f3b4b7aa79f4d457be088db/Untitled%201.png)
+<img src = "https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch03_image/Untitled%201.png" width="80%" height="80%">
 
 마스터노드 생성 및 상태확인
 
-![Untitled](Ch%2003%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20054d9dc39f3b4b7aa79f4d457be088db/Untitled%202.png)
+<img src = "https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch03_image/Untitled%202.png" width="80%" height="80%">
 
 토큰ID:
 
@@ -86,7 +86,7 @@ IP:192.168.64.6
     
     service ssh status로 ssh상태 확인가능
     
-    ![Untitled](Ch%2003%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20054d9dc39f3b4b7aa79f4d457be088db/Untitled%203.png)
+<img src = "https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch03_image/Untitled%203.png" width="80%" height="80%">
     
 
 워커노드에 k3s 설치
@@ -101,7 +101,7 @@ INSTALL_K3S_VERSION="v1.18.6+k3s1" sh -s -
 
 kubectl get node -o wide
 
-![Untitled](Ch%2003%20%E1%84%8F%E1%85%AE%E1%84%87%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B5%E1%84%89%E1%85%B3%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20054d9dc39f3b4b7aa79f4d457be088db/Untitled%204.png)
+<img src = "https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch03_image/Untitled%204.png" width="80%" height="80%">
 
 INTERNAL-IP가 각서버의 내부 IP주소
 
