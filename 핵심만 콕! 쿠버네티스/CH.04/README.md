@@ -24,7 +24,7 @@ image: nginx
 
 </aside>
 
-<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled.png" width="80%" height="100%"/>
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled.png" width="80%" height="80%"/>
 
 > pod?
 Pod는 쿠버네티스의 가장 작은 실행단위
@@ -41,7 +41,7 @@ Pod Status
 
 kubectl get pod mynginx -o yaml 사용시 Pod의 상태정보를 더 자세히 알 수 있음
 
-![Untitled](../images/CH04_image/Untitled%201.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%201.png" width="80%" height="80%"/>
 
 podIP, nodeName 등을 알 수 있음
 
@@ -56,7 +56,7 @@ kubectl get pod -o wide: PodIP를 조회할 수 있음
 
 get명령과 유사하게 pod의 상태정보를 보여줌, get과의 차이는 pod에 대한 이벤트기록까지 확인가능, 문제발생시 get명령과 함께 디버깅 용도로 사용
 
-![Untitled](../images/CH04_image/Untitled%202.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%202.png" width="80%" height="80%"/>
 
 ### 4.1.4 컨테이너 로깅
 
@@ -69,7 +69,7 @@ get명령과 유사하게 pod의 상태정보를 보여줌, get과의 차이는 
 
 kubectl wait —for condition=Ready pod mynginx: pod생성이 완료될 때까지 기다림
 
-![Untitled](../images/CH04_image/Untitled%203.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%203.png" width="80%" height="80%"/>
 
 ### 4.1.5 컨테이너 명령전달
 
@@ -82,7 +82,7 @@ kubectl exec -it mynginx — bash
 
 -it 옵션 이용시 컨테이너 내부로 진입가능
 
-![Untitled](../images/CH04_image/Untitled%204.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%204.png" width="80%" height="80%"/>
 
 ### 4.1.6 컨테이너 / 호스트간 파일 복사
 
@@ -101,7 +101,7 @@ exec로 복사확인
 
 cat로 mynginx의 /tmp/passwd파일 내용출력
 
-![Untitled](../images/CH04_image/Untitled%205.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%205.png" width="80%" height="80%"/>
 
 ### 4.1.7 컨테이너 정보 수정
 
@@ -114,7 +114,7 @@ cat로 mynginx의 /tmp/passwd파일 내용출력
 
 kubectl get pod mynginx -oyaml: 컨테이너 상세정보 조회
 
-![Untitled](../images/CH04_image/Untitled%206.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%206.png" width="80%" height="80%"/>
 
 ### 4.1.8 컨테이너 삭제
 
@@ -161,7 +161,7 @@ kubectl delete -f https://raw.githubusercontent.com/kubernates/website/master/co
 
 : 인터넷에 위치한 yaml정의서를 가지고도 컨테이너를 실행, 삭제 시킬 수 있음
 
-![Untitled](../images/CH04_image/Untitled%207.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%207.png" width="80%" height="80%"/>
 
 mynginx.yaml에  라벨을 추가하고 다시 실행하면 새로 컨테이너가 생성되는 것이 아닌 컨테이너의 설정값이 바뀌게 된다. 동일한 파일에 대해 똑같이 apply명령을 수행해도 기존의 컨테이너는 변경되지 않는다.
 
@@ -195,16 +195,16 @@ mynginx.yaml에  라벨을 추가하고 다시 실행하면 새로 컨테이너�
     
     </aside>
     
-    ![Untitled](../images/CH04_image/Untitled%208.png)
+    <img src="https://github.com/Jaemin-        kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%208.png" width="80%" height="80%"/>
     
-    ![Untitled](../images/CH04_image/Untitled%209.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%209.png" width="80%" height="80%"/>
     
 
 ### 4.2.2 네임스페이스(Namespace)
 
 네임스페이스는 쿠버네티스 클러스터를 논리적으로 나누는 역할을 한다. Pod, Service와 같은 리소스가 네임스페이스별로 생성되고 네임스페이스별로 사용자 접근제어, Network 접근제어 정책을 다르게 설정할 수 있다.
 
-![Untitled](../images/CH04_image/Untitled%2010.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2010.png" width="80%" height="80%"/>
 
 - default: 기본 네임스페이스로 아무옵션 없이 컨테이너를 만들면 default 네임스페이스에 생성된다.
 - kube-system: 쿠버네티스의 핵심 컴포넌트들이 있는 네임스페이스로 해당 네임스페이스에 네트워크 설정, DNS 서버 등 중요한 역할을 담당하는 컨테이너가 존재한다
@@ -213,7 +213,7 @@ mynginx.yaml에  라벨을 추가하고 다시 실행하면 새로 컨테이너�
 
 명령을 실행 할 때, —namespace옵션(-n)을 이용하여 특정 네임스페이스에 리소스를 생성할 수 있다.
 
-![Untitled](../images/CH04_image/Untitled%2011.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2011.png" width="80%" height="80%"/>
 
 네임스페이스 옵션 생략시 default 네임스페이스가 설정된다.
 
@@ -253,7 +253,7 @@ EOF
 
 </aside>
 
-![Untitled](../images/CH04_image/Untitled%2012.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2012.png" width="80%" height="80%"/>
 
 마스터 노드 IP출력
 
@@ -264,7 +264,7 @@ EOF
 
 </aside>
 
-![Untitled](../images/CH04_image/Untitled%2013.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2013.png" width="80%" height="80%"/>
 
 쿠버네티스 리소스는 네임스페이스 레벨 리소스와 클러스터 레벨 리소스로 구분됨. 
 
@@ -278,7 +278,7 @@ EOF
 
 </aside>
 
-![Untitled](../images/CH04_image/Untitled%2014.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2014.png" width="80%" height="80%"/>
 
 ### 4.2.7 리소스 정의 설명
 
@@ -316,7 +316,7 @@ cat $HOME/.kube/config
 
 </aside>
 
-![Untitled](../images/CH04_image/Untitled%2015.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/b4a15fb01b209f2cec3658b9e034d3a6c4b5e70a/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/CH04_image/Untitled%2015.png" width="80%" height="80%"/>
 
 KUBECONFIG파일 
 
