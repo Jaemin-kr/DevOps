@@ -404,7 +404,7 @@ spec:
 
 컨테이너가 최대 리소스 사용량을 넘어선다면 CPU의 경우 throttling이 발생하고 메모리의 경우 Out of Memory에러가 발생함, 예제의 경우에는 무한히 메모리 리소스를 소비함.
 
-```yaml
+```bash
 kubectl apply -f limits.yaml
 watch kubectl get pod
 ```
