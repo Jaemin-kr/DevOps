@@ -24,21 +24,21 @@ AWS Cloud9은 IDE로 브라우저에서 코드를 작성하고 디버깅할 수 
 
 Cloud9 enviroment create
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%201.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%201.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%202.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%202.png" width="80%" height="80%"/>
 
 사용자 로그인정보 확인
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%203.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%203.png" width="80%" height="80%"/>
 
 ## Java Workshop
 
 ### Infrastructure
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%204.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%204.png" width="80%" height="80%"/>
 
 준비사항
 
@@ -55,7 +55,7 @@ curl -s https://static.us-east-1.prod.workshops.aws/public/8c4076ba-a416-424d-ac
 cd InfrastructureApp
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%205.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%205.png" width="80%" height="80%"/>
 
 CDK 애플리케이션 종속성 설치 및 CDK 프로젝트 빌드
 
@@ -64,7 +64,7 @@ npm install
 npm run build
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%206.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%206.png" width="80%" height="80%"/>
 
 ### CDK Bootstrap
 
@@ -74,7 +74,7 @@ Bootstrap the CDK into your account and region. This is a one-time operation tha
 cdk bootstrap
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%207.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%207.png" width="80%" height="80%"/>
 
 ### CDK Deploy
 
@@ -85,19 +85,19 @@ cd ~/environment/InfrastructureApp
 cdk deploy
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%208.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%208.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%209.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%209.png" width="80%" height="80%"/>
 
 ```html
 Outputs:
 InfrastructureStack.BucketName = infrastructurestack-artifactbucket7410c9ef-c0ico2jsqoo0
-InfrastructureStack.BuildRoleArn = arn:aws:iam::609632095789:role/InfrastructureStack-CodeBuildRole728CBADE-MRCDYRZKO5BC
-InfrastructureStack.DeployRoleArn = arn:aws:iam::609632095789:role/InfrastructureStack-CodeDeployRole12BEECBE-P2TNAH1SJA4K
+InfrastructureStack.BuildRoleArn = arn:aws:iam::***
+InfrastructureStack.DeployRoleArn = arn:aws:iam::***
 InfrastructureStack.DevLocation = http://ec2-18-183-120-10.ap-northeast-1.compute.amazonaws.com
 InfrastructureStack.PrdLocation = http://ec2-13-231-79-173.ap-northeast-1.compute.amazonaws.com
 Stack ARN:
-arn:aws:cloudformation:ap-northeast-1:609632095789:stack/InfrastructureStack/8f32d870-ddfa-11ed-bfe2-0ebbca01d889
+arn:aws:cloudformation:***
 ```
 
 ### Repository
@@ -116,11 +116,11 @@ arn:aws:cloudformation:ap-northeast-1:609632095789:stack/InfrastructureStack/8f3
 - name: DemoApp
 - Create
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2010.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2010.png" width="80%" height="80%"/>
 
 URL복제 → HTTPS 복제: 리포지토리 URL을 복사
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2011.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2011.png" width="80%" height="80%"/>
 
 [https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/DemoApp](https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/DemoApp)
 
@@ -168,19 +168,19 @@ git push
 - Project Name: DemoApp
 - Source
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2012.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2012.png" width="80%" height="80%"/>
     
 - Environment
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2013.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2013.png" width="80%" height="80%"/>
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2014.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2014.png" width="80%" height="80%"/>
     
 - Buildspec 및 Artifacts
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2015.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2015.png" width="80%" height="80%"/>
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2016.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2016.png" width="80%" height="80%"/>
     
 - Log: Default
 
@@ -206,7 +206,7 @@ artifacts:
   discard-paths: no
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2017.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2017.png" width="80%" height="80%"/>
 
 변경사항 push
 
@@ -217,24 +217,24 @@ git commit -m "Add buildspec"
 git push
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2018.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2018.png" width="80%" height="80%"/>
 
 ### 빌드확인
 
 - AWS CodeBuild로 이동
 - DemoApp선택
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2019.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2019.png" width="80%" height="80%"/>
     
 - start build
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2020.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2020.png" width="80%" height="80%"/>
     
 - 빌트 상태 확인
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2021.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2021.png" width="80%" height="80%"/>
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2022.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2022.png" width="80%" height="80%"/>
     
 
 ## Deploy
@@ -245,7 +245,7 @@ WAR파일이 생성되었으므로 테스트 네트워크의 EC2 인스턴스에
 
 AWS CodeDeploy → Create Application
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2023.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2023.png" width="80%" height="80%"/>
 
 DemoApp선택 후 배포그룹 생성
 
@@ -254,12 +254,12 @@ DemoApp선택 후 배포그룹 생성
 - 배포 유형: 애플리케이션 배포방법 → 현재 위치
 - 환경구성
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2024.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2024.png" width="80%" height="80%"/>
     
 - 배포설정: CodeDeployDefault.AllAtOnce
 - 로드밸런서: 로드밸런싱 활성화 체크해제
     
-    ![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2025.png)
+    <img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2025.png" width="80%" height="80%"/>
     
 - 배포그룹 생성
 
@@ -291,33 +291,33 @@ hooks:
     - location: scripts/basic_health_check.sh
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2026.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2026.png" width="80%" height="80%"/>
 
 git repository에 commit 및 push
 
 AWS CodeBuild → DemoApp 선택 후 빌드 시작
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2027.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2027.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2028.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2028.png" width="80%" height="80%"/>
 
 ### Verify Deployment
 
 AWS CodeDeploy → DemoApp → 배포 그룹 → Development 선택 → 배포생성
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2029.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2029.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2030.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2030.png" width="80%" height="80%"/>
 
 배포생성
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2031.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2031.png" width="80%" height="80%"/>
 
 **InfrastructureStack.DevLocation에서 배포 내용을 확인할 수 있음**
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2032.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2032.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2033.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2033.png" width="80%" height="80%"/>
 
 ## Pipeline
 
@@ -325,27 +325,27 @@ AWS CodeDeploy → DemoApp → 배포 그룹 → Development 선택 → 배포�
 
 AWS CodePipeline → 파이프라인 생성(DemoApp) → 역할이름 변경 금지
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2034.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2034.png" width="80%" height="80%"/>
 
 소스 스테이지
 
 소스 공급자 → AWS CodeCommit선택
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2035.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2035.png" width="80%" height="80%"/>
 
 빌드 스테이지 → 공급자: AWS CodeBuild
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2036.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2036.png" width="80%" height="80%"/>
 
 배포 스테이지: AWS CodeDeploy
 
 애플리케이션 이름 및 배포그룹 선택(DemoApp, Development) → 파이프라인 생성
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2037.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2037.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2038.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2038.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2039.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2039.png" width="80%" height="80%"/>
 
 ### 파이프라인 확인
 
@@ -353,23 +353,23 @@ AWS CodePipeline → 파이프라인 생성(DemoApp) → 역할이름 변경 금
 
 Cloud9 DemoApp/src/main/webapp/WEB-INF/pages/index.jsp파일 open
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2040.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2040.png" width="80%" height="80%"/>
 
 제목 및 내용 수정
 
 커밋 및 푸시
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2041.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2041.png" width="80%" height="80%"/>
 
 에러 테스트
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2042.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2042.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2043.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2043.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2044.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2044.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2045.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2045.png" width="80%" height="80%"/>
 
 ## 리소스 삭제
 
@@ -394,28 +394,28 @@ cd ~/environment/InfrastructureApp
 cdk destroy
 ```
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2046.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2046.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2047.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2047.png" width="80%" height="80%"/>
 
 S3버킷 및 IAM 권한으로 인해 오류발생
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2048.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2048.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2049.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2049.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2050.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2050.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2051.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2051.png" width="80%" height="80%"/>
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2052.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2052.png" width="80%" height="80%"/>
 
 ### Delete Cloud9
 
 AWS Cloud9 → Development 삭제
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2053.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2053.png" width="80%" height="80%"/>
 
 ### EC2 인스턴스 종료 확인
 
-![Untitled](AWS%20CI%20CD%20Workshop%2037620301171340c6a81abc9873520166/Untitled%2054.png)
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/AWS_Workshop/CI:CD_Workshop/images/Untitled%2054.png" width="80%" height="80%"/>
