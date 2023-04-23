@@ -16,7 +16,7 @@
 
 Pod 리소스에 부여되는 IP를 이용하여 서비스를 호출하는 경우, 사용자가 끊임없이 서비스 Endpoint의 이상여부와 바뀐 IP를 추적해야한다. 이러한 문제를 해결하기 위해 Service라는 리소스를 통해 Pod의 앞단에서 Service로 들어오는 트래픽을 Pod로 전달하는 리버스 프록시의 역할을 수행하며 Pod의 IP가 변경되더라도 사용자의 입장에서는 동일한 IP로 접근할 수 있고 Pod가 죽더라도 Service가 다른 Pod로 트래픽을 전달해 주기 때문에 **안정성** 및 **가용성**을 높일 수 있다.
 
-[<Google Cloud>]<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled201.png" width="80%" height="80%"/>
+<Google Cloud><img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled%201.png" width="80%" height="80%"/>
 
 <Google Cloud>
 
@@ -70,7 +70,7 @@ kubectl get service
 kubectl get pod -owide
 ```
 
-<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled202.png" width="80%" height="80%"/>
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled%202.png" width="80%" height="80%"/>
 
 ```yaml
 kubectl run client --image nginx
@@ -85,9 +85,9 @@ kubectl exec client -- curl 10.43.52.73:8080
 kubectl exec client -- curl myservice:8080
 ```
 
-<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled203.png" width="80%" height="80%"/>
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled%203.png" width="80%" height="80%"/>
 
-<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled204.png" width="80%" height="80%"/>
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled%204.png" width="80%" height="80%"/>
 
 - Pod IP, Service IP, Service이름으로 요청하는 경우 모두 같은 결과 반환
 - Service 끝점으로 요청하는 경우 Service에서 사용하는 포트 8080을 사용
@@ -99,4 +99,4 @@ kubectl exec client -- sh -c "apt update && apt install -y dnsutils"
 kubectl exec client -- nslookup myservice
 ```
 
-<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled205.png" width="80%" height="80%"/>
+<img src="https://github.com/Jaemin-kr/DevOps/blob/main/%ED%95%B5%EC%8B%AC%EB%A7%8C%20%EC%BD%95!%20%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4/images/Ch06_image/Untitled%205.png" width="80%" height="80%"/>
